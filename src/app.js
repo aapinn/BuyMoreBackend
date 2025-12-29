@@ -7,8 +7,11 @@ const authRoutes = require("./routes/auth");
 
 const app = express();
 const corsOptions = {
-  origin: "http://localhost:5173",
-  credentials: true, // izinkan token / cookie
+  origin: [
+    "http://localhost:5173",
+    "https://buy-more-frontend.vercel.app"
+  ],
+  credentials: true,
 };
 
 // Connect DB
